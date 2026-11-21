@@ -407,12 +407,12 @@
 
       // MENSAJE LIMPIO
       const mensaje = encodeURIComponent(
-        Hola! Quiero mi bono.\n\n +
-        REF: ${ref}
+        `Hola! Quiero mi bono.\n\n` +
+        `REF: ${ref}`
       );
 
       // Redirección directa a WhatsApp
-      window.location.href = https://api.whatsapp.com/send?phone=${WHATSAPP_NUM}&text=${mensaje};
+      window.location.href = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUM}&text=${mensaje}`;
     }
 
     // CONTADOR REGRESIVO (10 minutos)
@@ -436,7 +436,7 @@
         let minutos = Math.floor(tiempoRestante / 60);
         let segundos = tiempoRestante % 60;
 
-        display.textContent = ${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')};
+        display.textContent = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
       }, 1000);
     }
 
